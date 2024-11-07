@@ -1,0 +1,38 @@
+default:
+  image: node:20
+
+# STAGES
+stages:
+  - validate
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - node_modules/
+  policy: pull-push
+
+# SETUP
+before_script:
+  - npm ci --prefer-offline
+
+# JOBS
+validate:lint:
+  stage: validate
+  script:
+    - npm run lint.check
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main" && $CI_PIPELINE_SOURCE == "merge_request_event"
+
+validate:fmt:
+  stage: validate
+  script:
+    - npm run fmt.check
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main" && $CI_PIPELINE_SOURCE == "merge_request_event"
+
+validate:test:
+  stage: validate
+  script:
+    - npm run test
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main" && $CI_PIPELINE_SOURCE == "merge_request_event"
