@@ -6,14 +6,21 @@
 
     "rules": {
       "all": true,
-      "correctness": { "useImportExtensions": "off" }
+      "correctness": { "useImportExtensions": "off" },
+      "performance": {
+        "noBarrelFile": "off"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "useNamingConvention": "off"
+      }
     }
   },
   "formatter": {
     "enabled": true
   },
   "files": {
-    "ignore": ["node_modules", "*.vue", "*.config.*"]
+    "ignore": ["node_modules", "*.vue", "*.config.*", "*.*js*"]
   },
   "overrides": [
     {

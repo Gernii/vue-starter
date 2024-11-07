@@ -52,8 +52,8 @@ package-lock.json
 yarn.lock
 package.json
 
-.*js*
-.*ts*
+**.*js*
+**.*ts*
 .wrangler
 
 types-bridge
