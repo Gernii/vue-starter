@@ -5,7 +5,7 @@ export const routes: RouteRecordRaw[] = [
 		path: "/:lang?",
 		children: [
 			{
-				path: "home",
+				path: "",
 				name: "home",
 				component: () => import("@/example/pages/task-list"),
 			},
