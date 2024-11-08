@@ -7,7 +7,7 @@ import unusedImports from 'eslint-plugin-unused-imports'
 export default [
   {
     name: 'app/files-to-lint',
-    files: ['**/*.vue'],
+    files: ['**/*.vue', '**/*.config.js'],
   },
 
   {
@@ -41,6 +41,7 @@ export default [
         },
       ],
       '@typescript-eslint/no-unused-vars': 'off',
+      'vue/multi-word-component-names': 'off',
     },
   },
   skipFormatting,

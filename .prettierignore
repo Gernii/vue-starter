@@ -54,6 +54,8 @@ package.json
 
 **.*js*
 **.*ts*
+!**.config.*s*
+
 .wrangler
 
 types-bridge

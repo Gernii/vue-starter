@@ -1,0 +1,8 @@
+{
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "hello": "Hello, world!",
+    "neat_awful_eagle_create": "Add",
+    "loose_crazy_fireant_engage": "Create a task",
+    "hour_fuzzy_kestrel_wave": "Dialog Description",
+    "loud_aware_shark_peel": "Close"
+}

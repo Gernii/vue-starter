@@ -1,49 +1,50 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 
-  "linter": {
-    "enabled": true,
+	"linter": {
+		"enabled": true,
 
-    "rules": {
-      "all": true,
-      "correctness": { "useImportExtensions": "off" },
-      "performance": {
-        "noBarrelFile": "off"
-      },
-      "style": {
-        "noDefaultExport": "off",
-        "useNamingConvention": "off"
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true
-  },
-  "files": {
-    "ignore": ["node_modules", "*.vue", "*.config.*", "*.*js*"]
-  },
-  "overrides": [
-    {
-      "include": ["*.d.ts"],
-      "linter": {
-        "rules": {
-          "recommended": true,
-          "all": false,
-          "correctness": {
-            "noUndeclaredVariables": "off"
-          },
-          "style": {
-            "noDefaultExport": "off",
-            "noNamespace": "off"
-          }
-        }
-      }
-    },
-    {
-      "include": ["*.nocheck.ts"],
-      "linter": {
-        "enabled": false
-      }
-    }
-  ]
+		"rules": {
+			"all": true,
+			"correctness": { "useImportExtensions": "off" },
+			"performance": {
+				"noBarrelFile": "off",
+				"noReExportAll": "off"
+			},
+			"style": {
+				"noDefaultExport": "off",
+				"useNamingConvention": "off"
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": ["node_modules", "*.vue", "*.config.*", "*.*js*"]
+	},
+	"overrides": [
+		{
+			"include": ["*.d.ts"],
+			"linter": {
+				"rules": {
+					"recommended": true,
+					"all": false,
+					"correctness": {
+						"noUndeclaredVariables": "off"
+					},
+					"style": {
+						"noDefaultExport": "off",
+						"noNamespace": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["*.nocheck.ts"],
+			"linter": {
+				"enabled": false
+			}
+		}
+	]
 }
